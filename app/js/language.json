@@ -134,5 +134,40 @@
       "btn_cursor_black": "gros curseur<br>noir",
       "btn_zoom_in": "élargir<br>l'écran"
     }
+  },
+  "de_DE": {
+    "btn_open": "Barrierefreiheits-Menü",
+    "btn_close": "schließen",
+    "keyboard_root": "Tastaturnavigation",
+    "disable_animattions": "Animationen deaktivieren",
+    "access_declaration": "Barrierefreiheitserklärung",
+    "debug_contacts": "Barrierefreiheitsproblem melden",
+    "reset_all_settings": "Einstellungen zurücksetzen",
+    "image_without_alt": "Bild ohne Text",
+    "contrast_block": {
+      "header": "Farbkontrast",
+      "btn_monochrome": "farblose<br>Anzeige",
+      "btn_bright": "heller<br>Kontrast",
+      "btn_invert": "Farben<br>umkehren"
+    },
+    "text_block": {
+      "header": "Textgröße",
+      "btn_font_up": "Text<br>vergrößern",
+      "btn_font_down": "Text<br>verkleinern",
+      "btn_font_readable": "lesbarer<br>Text"
+    },
+    "content_block": {
+      "header": "Inhalt hervorheben",
+      "btn_underline_links": "Links<br>unterstreichen",
+      "btn_underline_headers": "Überschriften<br>unterstreichen",
+      "btn_images_titles": "Bild-<br>titel"
+    },
+    "zoom_block": {
+      "header": "vergrößern",
+      "btn_cursor_white": "großer weißer<br>Cursor",
+      "btn_cursor_black": "großer schwarzer<br>Cursor",
+      "btn_zoom_in": "Bildschirm<br>vergrößern"
+    }
   }
+
 }
