@@ -1,6 +1,6 @@
 var gulp           = require('gulp'),
 		gutil          = require('gulp-util' ),
-		gulpSass           = require('gulp-sass'),
+		gulpSass           = require('gulp-sass')(require('sass')),
 		browserSync    = require('browser-sync'),
 		concat         = require('gulp-concat'),
 		uglify         = require('gulp-uglify'),
@@ -54,8 +54,7 @@ function code(cb) {
 
 function sass(cb) {
 	gulp.src('app/scss/**/*.scss')
-	.pipe(gulpSass({
-		outputStyle: 'expand'}).on("error", notify.onError()))
+	.pipe(gulpSass().on("error", notify.onError()))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer(['last 2 versions']))
 	.pipe(cleanCSS()) // comment on debug

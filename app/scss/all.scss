@@ -7,6 +7,7 @@ button {
   background: none;
   border-radius: 0;
   color: #333;
+  cursor: pointer;
 }
 
 img {
@@ -69,7 +70,7 @@ span.mic-toolbox-images-titles {
 		text-align: center;
 		padding: 4px 6px !important;
 		span {
-			display: block;
+			display: none;
 			margin-bottom: 4px;
 			line-height: 1;
 			font-weight: bold;
@@ -84,8 +85,6 @@ span.mic-toolbox-images-titles {
 	&.mic-access-tool-general-button-right {
 		left: auto;
 		right: 7px;
-		// border-right: none;
-		// border: solid 2px white;
 		border-radius: 4px 4px 4px 20px;
 	}
 	&:focus, &:hover {
@@ -105,7 +104,7 @@ span.mic-toolbox-images-titles {
 		box-shadow: 1px 0 4px 0 #777;
 		position: fixed;
 		height: 100vh;
-		width: 320px;
+		width: 100%;		
 		top: 0;
 		left: 0;
 		background-color: #003333;
@@ -191,7 +190,9 @@ span.mic-toolbox-images-titles {
 				// font-variant: small-caps;
 			}
 		}
-
+		.mic-disable-buttons{
+			display: none;
+		}
 		.mic-disable-buttons, .link-access-page {
 			button {
 				position: relative;
@@ -353,19 +354,20 @@ span.mic-toolbox-images-titles {
 	}
 
 	// SMALL SCREENS
-	@media screen and (max-width: 47em) {
+	@media screen and (min-width: 47em) {
 		.mic-access-tool-general-button {
 			> div {
 				span {
-					display: none;
+					display: block;
 				}
 			}
 		}
 		.mic-disable-buttons {
-			display: none;
+			display: block;
 		}
 		.mic-access-tool-box {
 			width: 100%;
+			max-width:50svw;
 		}
 		.mic-cursors-block {
 			display: none;
@@ -375,7 +377,9 @@ span.mic-toolbox-images-titles {
 }
 body.mic-toolbox-zoom-up > :not(#mic-init-access-tool) {
 	zoom: 1.4 !important;
+	transform: scale(1.4) !important;
 	-moz-transform: scale(1.4) !important;
+	transform-origin: 40% 0 !important;
 	-moz-transform-origin: 40% 0 !important;
 }
 // CONTRAST MONOCHROME
@@ -388,7 +392,7 @@ body.mic-toolbox-contrast-monochrome {
 // CONTRAST WHITE
 body.mic-toolbox-contrast-soft, 
 body.mic-toolbox-contrast-soft > :not(#mic-init-access-tool), 
-body.mic-toolbox-contrast-soft > :not(#mic-init-access-tool) *:not(img), {
+body.mic-toolbox-contrast-soft > :not(#mic-init-access-tool) *:not(img) {
 	color: Black !important;
   background: transparent !important;
 }
